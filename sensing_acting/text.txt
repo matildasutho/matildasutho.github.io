@@ -1,0 +1,127 @@
+BITS N ATOMS - Sensing and Acting
+
+Embodied Cognition
+Rene Descartes: dualism (physical / soul). the body as the interface between the mind and physical surroundings.
+
+Negative electrons attracted to positive protons, creating electromagnetism.
+
+PROTONS = POSITIVE
+ELECTRONS = NEGATIVE
+
+Atoms tend to move toward equilibrium
+
+Voltage / potential energy = refers to the difference in pressure between two points. This pressure exists even when there’s no flow - Spannung
+
+Current = amount of electrons moving thru the material - Strohm
+
+micro Amps 10 000 —> milli Amps 1 000 —> Amps 1
+e.g. USB can move 2 Amps
+
+Resistance = measure of restriction to the flow of electrons - Wiederstant
+Unit of measurement is ohms
+- calculate ohms using the coloured lines on the resistor
+
+Watt = found by multiplying the voltage and the current. When a current passes thru a component, the voltage drops.
+
+Watts = V x I (amps/current)
+
+V = I x R
+I = V/R
+
+To work out the value of resistor needed:
+R = V/I
+
+Watt hours = W x H (hours in use)
+
+DC = Direct Current - small voltages, most common
+AC = Alternating current - larger voltages such as fridges, hydroponic power stations, wind turbines
+
+Micro suppliers: sparkfun , adafruit
+
+ARDUINO
+Converts Analog to Digital values
+
+#define ledPin 11 //works identical to declaring a variable, no semicolon needed. Searches and replaces the ledPin term. Can't be changed throughout, communicates with the compiler rather the arduino itself
+
+~ is PulseWidthModulator, and can divide into 255 increments.
+
+openprocessing.org?
+
+
+Figure out the voltage between two resistors:
+
+
+Vres = Vcc x R2/(R1 + R2)
+
+tangible media group (MIT)
+Kinetic Architecture
+
+“ubiquitous computing”
+
+embodied interaction // J Van Dyke
+
+Morovek complex?
+
+unsigned long gives longer time
+
+unsigned long timer = millis() - lastTime; gives the value we will use to control the LEDs
+
+Transistors:
+B = bass
+C = collector
+E = emitter
+
+Circuit drawing —>
+TinkerCad
+Fritzing
+Eagle
+
+
+Communication Protocols
+
+UART 
+Tx = reading
+Rx = writing
+communicate between arduinos
+only for two devices
+daisy chain, not jumping the chain
+requires fixed baud rate
+
+I2C 
+SCL = serial clock
+SDA = serial data
+used widely in the IoT
+not super fast
+short distance to communicate w sensors (5m)
+
+SPI = Serial Peripheral Interface
+13 = serial clock
+12 = Master out slave in / MOSI
+11 = Master in slave out / MISO
+no limit to device aside from RAM and power supply
+
+Neopixels
+Individually addressable LED lights, in RGB colour.
+GRB current = 0.036A
+RGB current = 0.048A
+
+I[A] = Amps x no.LEDs x meters
+
+15m ws2812 x 60LED = 43.2 = 518Watts
+5m x 30LED = 7.2 = 36Watts
+
+P[W] = U[V]
+
+
+Servo Motors
+can only move 180 degrees
+within 20 degrees when you control directly with myservo.write
+
+H Bridge
+Bridge of transistors?
+
+can control two motors
+
+
+shiftr.io available multiple ports:
+1883 (TCP)
