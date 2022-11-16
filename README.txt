@@ -4,4 +4,6 @@
 █░░╚╩╝╚╝╚╝╚╝╚╝╩─╩╚╝░░█
 █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
 
-Documentation for ZHdK Semster 1, 2022 -- Bits and Atoms
+Documentation for ZHdK Semster 1, 2022
+
+Matilda Sutherland
