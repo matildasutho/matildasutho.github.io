@@ -14,7 +14,7 @@ function setup() {
     //background(237, 227, 175);
     sliderBuild();
 
-    title = createDiv("Future Climate: Mean Temperature Change");
+    title = createDiv("Future City: Mean Temperature Change");
     title.position(200, 10); //title meant to also act as a key
 }
 function draw() {
