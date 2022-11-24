@@ -4,6 +4,6 @@
 █░░╚╩╝╚╝╚╝╚╝╚╝╩─╩╚╝░░█
 █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
 
-Documentation for ZHdK Semster 1, 2022
+Documentation for ZHdK, 2022
 
 Matilda Sutherland
