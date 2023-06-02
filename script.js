@@ -48,5 +48,5 @@ $("#contact-btn").click(function () {
   $("#contact-wrap").css({ display: "block" }).addClass("fadeIn");
 });
 $("#exit").click(function () {
-  $("#contact-wrap").fadeOut(999).removeClass("fadeIn");
+  $("#contact-wrap").fadeOut(300).removeClass("fadeIn");
 });
