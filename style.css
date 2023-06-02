@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: "Social";
+  src: url("fonts/ABCWhyteInktrap-Medium.woff");
+}
+:root {
+  --over: rgb(230, 230, 230, 0.9);
+  --under: rgb(140, 131, 122);
+  --hover: rgba(238, 238, 238, 0.881);
+}
+body {
+  color: var(--over);
+  background-color: var(--under);
+  width: 100vw;
+  overflow-x: hidden;
+}
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 8em;
+  font-style: bold;
+}
+h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2em;
+  line-height: 3em;
+}
+p {
+  font-family: "Social";
+  font-size: 1.2em;
+}
+a {
+  color: var(--over);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--hover);
+}
+nav {
+  font-family: "Social";
+  margin: calc(50% - 47vw);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 94vw;
+  height: 2em;
+  text-align: right;
+  border-bottom: 1px solid white;
+}
+#contact-btn:hover {
+  transition-duration: 0.7s;
+  color: var(--hover);
+  cursor: pointer;
+}
+#parrallax-fx {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: -10;
+  background-color: var(--under);
+  background-image: url(img/BG.JPG);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+}
+.title-wrap {
+  background-color: var(--under);
+  padding: 30vh 20vw;
+  height: 100vh;
+  text-align: center;
+}
+.title-inner {
+  width: 60vw;
+}
+.outer-wrap {
+  display: flexbox;
+  flex-direction: column;
+  width: 100vw;
+}
+.inner-wrap {
+  display: flexbox;
+  flex-direction: column;
+  width: 100vw;
+  /* background-color: var(--under); */
+}
+section {
+  display: flexbox;
+  flex-direction: row;
+  text-align: center;
+}
+
+.box {
+  width: 60vw;
+  margin: 10vh 0;
+  padding: 10vh 10vw;
+  margin-left: calc(50% - 30vw);
+  transition: transform 2s, opacity 2s;
+  font-weight: bold;
+}
+.box.left {
+  transform: translateX(-200px);
+  opacity: 0;
+}
+.box.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+#plus {
+  position: absolute;
+  right: 3vh;
+  bottom: 3vh;
+}
+.line-break {
+  margin: calc(50% - 47vw);
+  width: 94vw;
+  height: 2em;
+  border-bottom: 1px solid var(--over);
+}
+
+#scrollDown:hover {
+  cursor: pointer;
+  color: var(--hover);
+}
+#contact-wrap {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 40vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--under);
+  display: none;
+}
+#exit {
+  position: fixed;
+  right: 3vw;
+  transform: rotateZ(45deg);
+}
+#exit:hover {
+  color: var(--hover);
+  cursor: pointer;
+}
+#contact-head {
+  font-family: "Social";
+  margin: calc(50% - 47vw);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 94vw;
+  height: 2em;
+  text-align: right;
+  border-bottom: 1px solid white;
+}
+.fadeIn {
+  animation: 1s fadeIn ease-in-out;
+}
+.fadeInReverse {
+  animation: 1s fadeIn reverse;
+}
+.fadeInUp {
+  animation: 1s fadeInUp ease-in-out;
+}
+.fadeAcross {
+  animation: 0.3s fadeAcross ease-in-out;
+}
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeAcross {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
