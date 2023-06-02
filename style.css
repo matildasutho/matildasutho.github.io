@@ -10,7 +10,7 @@
 :root {
   --over: rgb(230, 230, 230, 0.9);
   --under: rgb(140, 131, 122);
-  --hover: rgba(238, 238, 238, 0.881);
+  --hover: rgba(247, 247, 247, 0.98);
 }
 body {
   color: var(--over);
@@ -110,9 +110,11 @@ section {
 }
 #plus {
   position: absolute;
+  width: fit-content;
   right: 3vh;
   bottom: 3vh;
 }
+
 .line-break {
   margin: calc(50% - 47vw);
   width: 94vw;
