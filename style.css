@@ -196,3 +196,9 @@ section {
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 5em;
+  }
+}
