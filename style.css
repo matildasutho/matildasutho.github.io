@@ -71,6 +71,7 @@ nav {
   padding: 30vh 20vw;
   height: 100vh;
   text-align: center;
+  background-color: var(--under);
 }
 .title-inner {
   width: 60vw;
