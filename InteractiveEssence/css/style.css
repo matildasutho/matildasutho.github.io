@@ -5,9 +5,9 @@
   box-sizing: border-box;
 }
 :root {
-  --primary-color: #000000;
+  --primary-color: #ffffff;
   --secondary-color: rgb(255, 0, 255);
-  --tertiary-color: #ffffff;
+  --tertiary-color: #000000;
 }
 body {
   color: var(--primary-color);
@@ -18,11 +18,12 @@ body {
   height: 100vh;
   width: 100vw;
   font-size: 1em;
+  line-height: 1.5em;
 }
 .wrapper {
   display: grid;
   grid-template-columns: 243px 1fr;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: minmax(90px, 90px);
   gap: 0px 10px;
   min-height: 100vh;
 }
@@ -34,6 +35,7 @@ body {
   grid-column: 1 / 4; /* the grid-column selects which column the grid starts in, and which it ends BEFORE. This is a three column website, so it ends before the 4th, at the end of the 3rd */
   grid-row: 1;
   font-size: 2em;
+  line-height: 3em;
   text-align: center;
   border-bottom: 1px solid var(--primary-color);
 }
@@ -66,11 +68,11 @@ a {
   cursor: pointer;
 }
 a:has(h2) {
-  color: black;
+  color: var(--primary-color);
 }
 a:has(h1) {
   text-decoration: none;
-  color: black;
+  color: var(--primary-color);
 }
 a:has(h2):hover {
   color: var(--secondary-color);
@@ -96,7 +98,7 @@ button:hover {
   transition: 0.3s;
 }
 figure {
-  margin: 20px 0px;
+  margin-bottom: 2em;
 }
 figcaption {
   font-style: italic;
