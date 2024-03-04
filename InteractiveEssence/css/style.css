@@ -24,6 +24,7 @@ body {
   grid-template-columns: 243px 1fr;
   grid-template-rows: auto 1fr auto;
   gap: 0px 10px;
+  min-height: 100vh;
 }
 /* the wrapper styling bellow selects specifically the children of the wrapper element. So, any elements nested directly bellow the wrapper are targeted by whatever styling is applied here */
 .wrapper > * {
