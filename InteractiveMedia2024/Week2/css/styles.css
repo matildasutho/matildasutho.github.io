@@ -66,10 +66,11 @@ body {
 }
 @keyframes pulse-ring {
   0% {
-    transform: scale(0.33);
+    transform: scale(0.5);
   }
   80%,
   100% {
     opacity: 0;
+    transform: scale(5);
   }
 }
