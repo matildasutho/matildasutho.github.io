@@ -1,6 +1,8 @@
 /* bAbsolute positiioned circles */
 body {
-  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+  padding: 1em;
   margin: 0;
   width: 100vw;
   height: 100vh;
@@ -31,7 +33,6 @@ body {
   animation: pulse-dot 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
   text-align: center;
   line-height: 100px;
-  font-family: "Courier New", Courier, monospace;
   &:active {
     animation: pulse-ring 3s cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-iteration-count: 1;
