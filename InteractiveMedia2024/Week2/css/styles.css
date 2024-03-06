@@ -1,7 +1,8 @@
-/* bAbsolute positiioned circles */
+/* Absolute positiioned circles */
+/* the overflow-x on the .wk-box allows the user to scroll horizontally to see the circles */
+/* using the absolute positioning, which allows you to place the circles anywhere in or outside the viewport */
+/* BEGIN */
 body {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 1em;
   padding: 1em;
   margin: 0;
   width: 100vw;
@@ -9,7 +10,10 @@ body {
   display: flex;
   flex-direction: column;
   overflow-y: hidden;
-  background-color: rgb(104, 104, 104);
+  background-color: rgb(17, 0, 104);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+  color: white;
 }
 #title {
   height: 90px;
@@ -23,6 +27,7 @@ body {
   height: calc(100vh - 90px);
   margin-top: auto;
   margin-bottom: auto;
+  color: red;
 }
 .wk-box > * {
   width: 100px;
@@ -38,6 +43,7 @@ body {
     animation-iteration-count: 1;
   }
 }
+
 #wk-1 {
   position: absolute;
   top: 20%;
@@ -74,3 +80,82 @@ body {
     transform: scale(5);
   }
 }
+/* END */
+
+/* Shooting Stars */
+/* BEGIN */
+.shooting-stars {
+  position: absolute;
+  z-index: -10;
+}
+.stars1 {
+  color: rgb(245, 245, 171);
+  text-shadow: rgb(190, 190, 232);
+  font-size: 1.4em;
+  letter-spacing: -2px;
+  text-shadow: 2px 2px 20px yellow;
+  opacity: 0.9;
+}
+#star1 {
+  position: absolute;
+  top: 0px;
+  right: 10vw;
+  animation: 3.3s shootingStar linear infinite;
+}
+#star2 {
+  position: absolute;
+  top: 0px;
+  right: 50vw;
+  animation: 2.7s shootingStar linear infinite;
+}
+#star3 {
+  position: absolute;
+  top: -15vh;
+  right: 60vw;
+  animation: 4.2s shootingStar linear infinite;
+  animation-delay: 1.2s;
+}
+#star4 {
+  position: absolute;
+  top: -30vh;
+  right: 90vw;
+  animation: 4.3s shootingStar linear infinite;
+  animation-delay: 2s;
+}
+#star5 {
+  position: absolute;
+  top: -40vh;
+  right: 30vw;
+  animation: 3s shootingStar linear infinite;
+}
+#star6 {
+  position: absolute;
+  top: -3vh;
+  right: -50vw;
+  animation: 3s shootingStar linear infinite;
+  animation-delay: 1.2s;
+}
+#star7 {
+  position: absolute;
+  top: -22px;
+  right: -20vw;
+  animation: 2s shootingStar linear infinite;
+  animation-delay: 2.2s;
+}
+@keyframes stars-fall {
+  0% {
+    line-height: 5px;
+  }
+  100% {
+    line-height: 10px;
+  }
+}
+@keyframes shootingStar {
+  0% {
+    transform: rotateZ(-40deg) translateX(0%) translateY(0%);
+  }
+  100% {
+    transform: rotateZ(-70deg) translateX(-150vw) translateY(50vh);
+  }
+}
+/* END */
