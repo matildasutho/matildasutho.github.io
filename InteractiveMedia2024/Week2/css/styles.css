@@ -2,6 +2,9 @@
 /* the overflow-x on the .wk-box allows the user to scroll horizontally to see the circles */
 /* using the absolute positioning, which allows you to place the circles anywhere in or outside the viewport */
 /* BEGIN */
+* {
+  cursor: url("../img/custom_cursor-32px.png"), auto;
+}
 body {
   padding: 1em;
   margin: 0;
@@ -11,7 +14,7 @@ body {
   flex-direction: column;
   overflow-y: hidden;
   background-color: rgb(17, 0, 104);
-  font-family: "Courier New", Courier, monospace;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
   color: white;
 }
