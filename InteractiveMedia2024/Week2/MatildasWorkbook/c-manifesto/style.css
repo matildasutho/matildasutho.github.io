@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    text-align: left;
+    padding: 2%;
+}
+body {
+    color: rgba(209, 208, 208, 1);
+    background-color: #999b9b;
+    font-family: 'Hina Mincho', serif;
+    font-size: 1em;
+    text-align: center;
+    letter-spacing: 3;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+section {
+    position: absolute;
+    padding: 5% 27%;
+    height: 50rem;
+}
+h1 {
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+    text-shadow: 0.005em 0.005em 0.2em rgba(255, 255, 255, 0.67);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+}
+p {
+    font-size: 1.7rem;
+    
+}
+h2 {
+    font-size: 1rem;
+    color:#1a1a1a;
+    text-align: left;
+}
+pre {
+    font-family: 'Hina Mincho', serif;
+}
+.fixed-wrapper {
+    width: fit-content;
+    height: fit-content;
+    z-index: 100;
+}
+#text-layer {
+    position: absolute;
+
+    cursor: move;
+    box-shadow: 0.1rem 0.1rem 0.5rem rgba(124, 124, 124, 0.67);
+}
+#video-layer {
+    position: absolute;
+    cursor: move;
+    box-shadow: 0.1rem 0.1rem 0.5rem rgba(124, 124, 124, 0.67);
+}
+#cowgirl-layer {
+    position: absolute;
+    cursor: move;
+    box-shadow: 0.1rem 0.1rem 0.5rem rgba(124, 124, 124, 0.67);
+}
+#cloud-layer {
+    position: absolute;
+    cursor: move;
+    box-shadow: 0.1rem 0.1rem 0.5rem rgba(124, 124, 124, 0.67);
+    opacity: 0.46;
+}
+#icon-layer {
+    position: absolute;
+    cursor: move;
+    box-shadow: 0.1rem 0.1rem 0.5rem rgba(124, 124, 124, 0.67);
+}
+button {
+    padding: 0.5em 2em;
+    margin: 0.5em;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0.005em 0.005em 0.2em rgba(255, 255, 255, 0.67);
+    font-family: 'Times New Roman', Times, serif;
+}
