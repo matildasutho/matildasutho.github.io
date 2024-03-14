@@ -11,6 +11,7 @@
         height: 100vh;
         width: 100vw;
         margin: 0;
+        padding: 0;
         color: black;
       }
       .welcome-txt {
@@ -18,11 +19,73 @@
         width: 100%;
         height: 100%;
       }
+      .flex-wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      #bg-grad {
+        background-image: linear-gradient(115deg, #745fff, #ffffff, #ff7e5f);
+        width: 2000px;
+        height: 2000px;
+        background-size: 400% 400%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -10;
+        animation: 10s gradMove alternate-reverse infinite;
+      }
+      #popUp {
+        width: 30vw;
+        height: 200px;
+        background-color: white;
+        position: absolute;
+        z-index: 10;
+        top: 30%;
+        left: 35vw;
+        border: 1px solid black;
+      }
+      .hidden {
+        display: none;
+      }
+      @keyframes gradMove {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
     </style>
   </head>
   <body>
-    <h1>Week 3 - Grids Responsivness, CSS Media Queries</h1>
+    <div id="bg-grad"></div>
+    <div class="flex-wrap">
+      <h1>Week 3 - Grids Responsivness, CSS Media Queries</h1>
+      <button onclick="toggleHidden()">POP UP</button>
+    </div>
+    <div class="hidden" id="popUp">
+      This div's visibility is controlled by the op up button, using JS to
+      toggle the 'hidden' class. The hidden class gives any element a style of
+      "display: hidden;". When it is removed, the default display of "block" is
+      applied.
+    </div>
     <div id="welcomeType" class="welcome-txt"></div>
+
+    <script>
+      function toggleHidden() {
+        var element = document.getElementById("popUp");
+        if (!element.classList.contains("hidden")) {
+          element.classList.add("hidden");
+        } else {
+          element.classList.toggle("hidden");
+        }
+      }
+    </script>
   </body>
   <script src="script/script.js"></script>
 </html>
