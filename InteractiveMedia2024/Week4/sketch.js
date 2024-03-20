@@ -22,6 +22,7 @@ function setup() {
   lip1 = random(colors);
   lip2 = random(colors);
   noseFill = random(colors);
+  print(colors);
   // frameRate(3);
 }
 
