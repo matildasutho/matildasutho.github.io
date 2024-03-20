@@ -22,7 +22,7 @@ function setup() {
   lip1 = random(colors);
   lip2 = random(colors);
   noseFill = random(colors);
-  frameRate(3);
+  // frameRate(3);
 }
 
 // anything in the draw function will be run over and over according the frame rate
