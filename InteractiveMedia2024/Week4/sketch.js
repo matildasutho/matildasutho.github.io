@@ -8,7 +8,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   // set the background colour of the canvas randomly using the randomColour function
   background(randomColour());
-
+  // the array of random colours. These will
   colors = [
     randomColour(),
     randomColour(),
