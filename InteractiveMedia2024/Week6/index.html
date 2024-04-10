@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 6 - Data Visualisation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        /* background-color: black; */
+        font-family: "Sono";
+        font-weight: 100;
+        color: white;
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      body {
+        display: flex;
+        flex-direction: row;
+      }
+      .dateSlider {
+        -webkit-appearance: none;
+      }
+      .dateSlider::-webkit-slider-runnable-track {
+        background: rgb(0, 0, 248);
+        height: 10px;
+        -webkit-appearance: none;
+      }
+      .dateSlider::-webkit-slider-thumb {
+        width: 30px;
+        height: 10px;
+        background-image: radial-gradient(rgba(0, 0, 0, 0), white);
+        cursor: crosshair;
+        -webkit-appearance: none;
+        border-radius: 15px;
+      }
+
+      .coords {
+        width: 100px;
+        height: 100vh;
+        line-height: 50px;
+        padding-left: 20px;
+        position: fixed;
+        z-index: 100;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="coords"></div>
+    <script src="sketch.js"></script>
+  </body>
+</html>
