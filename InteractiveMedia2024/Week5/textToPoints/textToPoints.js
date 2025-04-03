@@ -1,36 +1,45 @@
-var color1;
 var font;
 let points = [];
+let bounds, word, size;
 
-function preload() {
+function preload(){
   font = loadFont("./data/Karrik-Italic.ttf");
-}
+ }
+ 
 function setup() {
-  createCanvas(window.innerWidth, window.innerHeight);
-  // color1 = color(random(0, 255), random(0, 255), random(0, 255));
-  points = font.textToPoints("Les Points", width / 2 - 450, height / 2, 200, {
-    sampleFactor: 0.2,
+  createCanvas(windowWidth, windowHeight);
+  background(160, 0, 160);
+  size = width/7;
+  word = "Les Points";
+  points = font.textToPoints(word,
+  width / 7, // x position
+  height / 2, // y position
+  size, {
+    sampleFactor: 0.75, // level of detial
   });
-  // let box = font.textBounds("DIAMONDS", 0, 200, 200);
+  
+   bounds = font.textBounds(word, 0, 0, size);
 }
-
 function draw() {
-  background(220, 30);
-  xMapped = map(mouseX, 0, width, 4, 96);
-  //for loop below, edit inside to change each point
-  for (let p of points) {
-    fill(xMapped);
-    noStroke();
-    ellipse(p.x, p.y, xMapped, xMapped);
-  }
+   background(160, 0, 160);
+  let xMapped = map(mouseX, 0, width, 1, 48);
+    for (let p of points) {
+      //noStroke();
+      stroke("blue");
+      fill(160);
+      circle(p.x, p.y, xMapped);
+    }
 }
-// function pointilize() {
-//  for(let i = 0; i < points.length; i++) {
-//    ellipse(points[i].x, points[i].y, 3, 3);
-//  }
-// }
 
-//fill("pink");
-//textSize(96);
-//textFont("Bebas Neue");
-//text("DIAMONDS", mouseX, mouseY);
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  size = width/7;
+  textAlign(CENTER,CENTER);
+  points = font.textToPoints(
+    word, width/7, height/2, size, {
+      sampleFactor: 0.75,
+      simplifyThreshold: 0
+    });
+  names=[];
+  bounds = font.textBounds(word, 0, 0, size); 
+}
