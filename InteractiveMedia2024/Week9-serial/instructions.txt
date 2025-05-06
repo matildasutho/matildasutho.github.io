@@ -1,0 +1,16 @@
+We'll be using the Web Serial API - which allows websites to communicate to ports in your computer (USB etc). You'll need to use a chromium based browser - such as Chrome. 
+
+The library will need to be added to the index.html file of your processing sketch, using this CDN:
+ <script src="https://cdn.jsdelivr.net/gh/makeabilitylab/p5js/_libraries/serial.js"></script>
+
+To check if your browser supports web serial, you can open a console (cmd + option+ i on Mac or ctrl + alt + i on Windows) and type in:
+
+await navigator.serial.requestPort();
+
+If the browser supports it, you will see a pop-up window, where you can choose one of the ports with Arduino plugged in.
+
+You can bypass this by opening and compiling the Arduino and p5 sketch, and clicking on the p5 canvas to select the port. 
+
+You should be able to control the brightness of the sketch with the potentiometer. The data is being passed through the value dataIn - use this anywhere to make changes to your webpage via physical computing.
+
+The sketch will break if you have Arduino's serial monitor open at the same, so the LEDs are a physical outcome to test that your Arduino is communicating with your computer.
